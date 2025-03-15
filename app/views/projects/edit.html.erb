@@ -7,6 +7,13 @@
 <br>
 
 <div>
-  <%= link_to "Show this project", @project %> |
-  <%= link_to "Back to projects", projects_path %>
+  <div class="projects-list__actions">
+    <%= link_to @project, class: "btn-icon btn-view" do %>
+      👀 Show Project
+    <% end %>
+
+    <%= link_to admin_dashboard_path, class: "btn-icon btn-back" do %>
+      🔙 Back to Projects
+    <% end %>
+  </div>
 </div>
