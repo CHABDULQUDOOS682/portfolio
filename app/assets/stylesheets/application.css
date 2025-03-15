@@ -350,7 +350,6 @@ textarea {
     margin-bottom: 3rem;
     max-height: 350px; }
 .projects-list__img {
-    border: 1px solid red;
     width: 100%;
     height: 100%;
     object-fit: cover; }
@@ -601,3 +600,209 @@ textarea {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #777; }
+
+/*DashBoard Style*/
+.main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+    transition: margin-left 0.3s, width 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #7854f7, #45c3f8);
+}
+.top-nav {
+    background-color: #2a1969;
+    padding: 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.dashboard-content {
+    margin-top: 20px;
+    flex-grow: 1;
+}
+/*.card {*/
+/*    background: white;*/
+/*    padding: 20px;*/
+/*    margin-bottom: 20px;*/
+/*    border-radius: 5px;*/
+/*    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-btn {
+    background: #45c3f8;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.toggle-btn:hover {
+    background: #369dd4;
+}
+
+.card-content {
+    display: block;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+.btn-logout {
+    background-color: #7854f7;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #369dd4;
+    transform: scale(1.05);
+}
+
+.btn-logout:active {
+    background-color: #2a7bac;
+    transform: scale(0.98);
+}
+
+/* Style table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #7854f7;
+    color: white;
+}
+
+/* Image Styling */
+.project-image {
+    width: 60px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Action buttons */
+.action-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon {
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Icon Colors */
+.btn-view {
+    color: #3498db;
+}
+
+.btn-edit {
+    color: #f1c40f;
+}
+
+.btn-delete {
+    color: #e74c3c;
+}
+
+/*SHOW Projects Style*/
+.projects-list__project {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.projects-list__heading {
+    font-size: 22px;
+    color: #2a1969;
+    margin-bottom: 10px;
+}
+
+.projects-list__img-cont {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.no-image {
+    color: #999;
+    font-style: italic;
+}
+
+.projects-list__text-tertiary {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.projects-list__actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+/* Action Buttons */
+.btn-icon {
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/*EDIT Project Style*/
