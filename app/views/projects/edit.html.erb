@@ -1,0 +1,19 @@
+<% content_for :title, "Editing project" %>
+
+<h1>Editing project</h1>
+
+<%= render "form", project: @project %>
+
+<br>
+
+<div>
+  <div class="projects-list__actions">
+    <%= link_to @project, class: "btn-icon btn-view" do %>
+      👀 Show Project
+    <% end %>
+
+    <%= link_to admin_dashboard_path, class: "btn-icon btn-back" do %>
+      🔙 Back to Projects
+    <% end %>
+  </div>
+</div>
