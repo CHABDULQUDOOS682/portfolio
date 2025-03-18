@@ -649,7 +649,7 @@ textarea {
     cursor: pointer;
 }
 
-.toggle-btn {
+.toggle-btn, .add-btn {
     background: #45c3f8;
     color: white;
     border: none;
@@ -805,4 +805,42 @@ th {
     font-weight: bold;
 }
 
-/*EDIT Project Style*/
+/*SLIDERe*/
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}

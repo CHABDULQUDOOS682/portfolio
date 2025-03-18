@@ -41,7 +41,7 @@
     </div>
     <div class="hero__cta home-hero__cta">
       <a href="#about" class="btn btn--primary hero__btn">About Me</a>
-      <a href="#projects" class="btn btn--secondary hero__btn"> My Projects </a>
+      <a href="#MyProjects" class="btn btn--secondary hero__btn"> My Projects </a>
     </div>
   </div>
 </section>
@@ -80,7 +80,7 @@
         <div class="about__visual-content">
           <div class="about__img-cont">
             <img
-                src="https://images.unsplash.com/photo-1567131308523-383d0fea9671?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=672&q=80"
+                src="1730661383446.jpeg"
                 class="about__img"
                 />
           </div>
@@ -89,38 +89,31 @@
     </div>
   </div>
 </section>
+
 <section class="skills">
   <div class="container">
+    <h2 class="heading heading-sec section-heading">
+      <span>Skills</span>
+    </h2>
     <div class="skills__content">
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
-
-
-        <i class="devicon-html5-plain-wordmark skills__skill"></i>
+        <i class="devicon-html5-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-css3-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-javascript-plain colored skills__skill"></i>
+        <i class="devicon-json-plain colored skills__skill"></i>
+        <i class="devicon-bootstrap-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-tailwindcss-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-ruby-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-rails-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-postgresql-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-sqlite-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-mysql-plain-wordmark colored skills__skill"></i>
+        <i class="devicon-heroku-original-wordmark colored skills__skill"></i>
 
     </div>
   </div>
 </section>
 
-<section id="projects" class="projects">
+<section id="MyProjects" class="projects">
   <div class="container">
     <h2 class="heading heading-sec section-heading">
       <span>Projects</span>
@@ -130,9 +123,7 @@
       <% @projects.each do |project| %>
         <div class="projects-list__project">
           <div class="projects-list__img-cont">
-            <% project.images.each do |image| %>
-              <%= image_tag image, class: "projects-list__img" %>
-            <% end %>
+            <%= image_tag project.images.first, class: "projects-list__img" %>
           </div>
 
           <h3 class="projects-list__heading">
@@ -143,7 +134,7 @@
             <%= project.description %>
           </p>
 
-          <%= link_to "More Detail", project_path(project), class: "btn btn--theme projects-list__btn" %>
+          <%= link_to "More Detail", project_detail_path(project), class: "btn btn--theme projects-list__btn" %>
 
 
         </div>
