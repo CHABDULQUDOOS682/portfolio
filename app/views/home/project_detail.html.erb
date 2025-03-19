@@ -34,15 +34,31 @@
         <button class="slider-btn next-btn">&#10095;</button>
       </div>
 
+      <!--      <div class="projects-list__actions">-->
+      <%#= link_to "#{root_path}#MyProjects", class: "btn-icon btn-view" do %>
+      <!--          🔙 Back-->
+      <%# end %>
+      <!--      </div>-->
+    </div>
+    <div class="projects-list__project">
+      <p class="text-tertiary projects-list__text-tertiary">
+        <%#= @project.description %>
+        If your page is scrolling to the wrong part of the section (such as the center or bottom instead of the top),
+        you can use JavaScript to ensure it scrolls precisely to the top of each section. Here's an improved version
+        using scrollIntoView() to control the scrolling behavior: If your page is scrolling to the wrong part of the
+        section (such as the center or bottom instead of the top), you can use JavaScript to ensure it scrolls precisely
+        to the top of each section. Here's an improved version using scrollIntoView() to control the scrolling behavior:
+      </p>
+    </div>
+    <div class="projects-list__project">
       <p class="text-tertiary projects-list__text-tertiary">
         <%= @project.description %>
       </p>
-
-      <div class="projects-list__actions">
-        <%= link_to "#{root_path}#MyProjects", class: "btn-icon btn-view" do %>
-          🔙 Back
-        <% end %>
-      </div>
+    </div>
+    <div class="projects-list__project">
+      <p class="text-tertiary projects-list__text-tertiary">
+        <%= @project.description %>
+      </p>
     </div>
   </div>
 </div>
