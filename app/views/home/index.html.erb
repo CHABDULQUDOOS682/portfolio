@@ -30,7 +30,7 @@
   <div class="container">
     <h1 class="heading heading-primary">
       <span class="heading-primary__text">The Only Web Developer</span>
-      <br />
+      <br/>
       <span class="heading-primary__text">You'll ever need</span>
     </h1>
     <div class="hero__info home-hero__info">
@@ -40,12 +40,12 @@
       </p>
     </div>
     <div class="hero__cta home-hero__cta">
-      <a href="#about" class="btn btn--primary hero__btn">About Me</a>
-      <a href="#MyProjects" class="btn btn--secondary hero__btn"> My Projects </a>
+      <a data-target="about" class="btn btn--primary hero__btn">About Me</a>
+      <a data-target="MyProjects" class="btn btn--secondary hero__btn"> My Projects </a>
     </div>
   </div>
 </section>
-<section id="about" class="about">
+<section id="about" class="section section--hidden about">
   <div class="container">
     <div class="about__main">
       <div class="about__content">
@@ -60,14 +60,14 @@
               praesentium natus voluptates, explicabo, aliquid illo laborum
               consectetur iusto, totam optio enim dolorum.
             </p>
-            <br />
+            <br/>
             <p class="text-sec about__text-sec">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Maiores iure ratione inventore in quam vitae quidem mollitia
               praesentium natus voluptates, explicabo, aliquid illo laborum
               consectetur iusto, totam optio enim dolorum.
             </p>
-            <br />
+            <br/>
             <p class="text-sec about__text-sec">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Maiores iure ratione inventore in quam vitae quidem mollitia
@@ -79,10 +79,7 @@
         </div>
         <div class="about__visual-content">
           <div class="about__img-cont">
-            <img
-                src="1730661383446.jpeg"
-                class="about__img"
-                />
+            <%=image_tag 'about/custom.jpg', alt: "about" %>
           </div>
         </div>
       </div>
@@ -90,30 +87,61 @@
   </div>
 </section>
 
-<section class="skills">
+<section id="skills" class="skills">
   <div class="container">
     <h2 class="heading heading-sec section-heading">
       <span>Skills</span>
     </h2>
     <div class="skills__content">
-        <i class="devicon-html5-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-css3-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-javascript-plain colored skills__skill"></i>
-        <i class="devicon-json-plain colored skills__skill"></i>
-        <i class="devicon-bootstrap-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-tailwindcss-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-ruby-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-rails-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-postgresql-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-sqlite-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-mysql-plain-wordmark colored skills__skill"></i>
-        <i class="devicon-heroku-original-wordmark colored skills__skill"></i>
+      <div class="skill-box">
+        <%=image_tag 'services/ror.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Html5.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Css3.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Tailwind_CSS.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/next-js.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/react.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/aws.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/blockchain.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Django.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Angular.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Express-JS.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/flutter.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/Typescript.png', alt: "ror" %>
+      </div>
+      <div class="skill-box">
+        <%=image_tag 'services/node.png', alt: "ror" %>
+      </div>
+
 
     </div>
   </div>
 </section>
 
-<section id="MyProjects" class="projects">
+<section id="MyProjects" class="section section--hidden projects">
   <div class="container">
     <h2 class="heading heading-sec section-heading">
       <span>Projects</span>
@@ -136,7 +164,6 @@
 
           <%= link_to "More Detail", project_detail_path(project), class: "btn btn--theme projects-list__btn" %>
 
-
         </div>
       <% end %>
 
@@ -152,33 +179,33 @@
       <form action="#" class="contact__form">
         <div class="contact__form-field">
           <input
-              placeholder="Name"
-              type="text"
-              class="contact__form-input"
-              />
+            placeholder="Name"
+            type="text"
+            class="contact__form-input"
+            />
         </div>
         <div class="contact__form-field">
           <input
-              placeholder="Email"
-              type="text"
-              class="contact__form-input"
-              />
+            placeholder="Email"
+            type="text"
+            class="contact__form-input"
+            />
         </div>
         <div class="contact__form-field">
           <input
-              placeholder="Phone Number"
-              type="text"
-              class="contact__form-input"
-              />
+            placeholder="Phone Number"
+            type="text"
+            class="contact__form-input"
+            />
         </div>
         <div class="contact__form-field">
               <textarea
-                  name=""
-                  id=""
-                  cols="30"
-                  rows="10"
-                  class="contact__form-input"
-                  placeholder="Message"
+                name=""
+                id=""
+                cols="30"
+                rows="10"
+                class="contact__form-input"
+                placeholder="Message"
               ></textarea>
         </div>
         <button class="btn btn--primary contact__btn">Submit</button>
@@ -193,43 +220,15 @@
         <h2 class="heading heading-sm main-footer__heading-sm">
           <span>Find Us</span>
         </h2>
-        <div class="main-footer__social-cont">
-          <a target="_blank" rel="noreferrer" href="#">
-            <img
-                class="main-footer__icon"
-                src="./assets/png/github-ico.png"
-                alt="icon"
-                />
-          </a>
-          <a target="_blank" rel="noreferrer" href="#">
-            <img
-                class="main-footer__icon"
-                src="./assets/png/linkedin-ico.png"
-                alt="icon"
-                />
-          </a>
-          <a target="_blank" rel="noreferrer" href="#">
-            <img
-                class="main-footer__icon"
-                src="./assets/png/twitter-ico.png"
-                alt="icon"
-                />
-          </a>
-          <a target="_blank" rel="noreferrer" href="#">
-            <img
-                class="main-footer__icon"
-                src="./assets/png/insta-ico.png"
-                alt="icon"
-                />
-          </a>
-          <a target="_blank" rel="noreferrer" href="#">
-            <img
-                class="main-footer__icon"
-                src="./assets/png/yt-ico.png"
-                alt="icon"
-                />
-          </a>
-        </div>
+                <div class="main-footer__social-cont">
+                  <a target="_blank" rel="noreferrer" href="#">
+                    <%=image_tag 'icons/linkedin-nsv.svg', width: 30, alt: "ror" %>
+                  </a>
+                  <a target="_blank" rel="noreferrer" href="#">
+                    <%=image_tag 'icons/facebook-logo-2019.png', width: 30, alt: "ror" %>
+
+                  </a>
+                </div>
       </div>
       <div class="main-footer__row main-footer__row-2">
         <h4 class="heading heading-sm text-lt">John Doe</h4>
@@ -241,7 +240,8 @@
     </div>
 
     <div class="main-footer__lower">
-      &copy; Copyright 2021. Made in Earth
+      &copy; Copyright 2025. <a href="http://junaid-ahmad-sandhu.netlify.app/" target="_blank"> Junaid Sandhu </a>
     </div>
   </div>
 </footer>
+
