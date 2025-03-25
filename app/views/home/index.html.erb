@@ -170,49 +170,34 @@
     </div>
   </div>
 </section>
+
 <section class="contact">
   <div class="container">
     <h2 class="heading heading-sec section-heading contact__heading">
       <span>Contact</span>
     </h2>
     <div class="contact__form-container">
-      <form action="#" class="contact__form">
+      <%= form_with url: send_email_path, method: :post, html: { class: "contact__form", data: { turbo: false } } do |f| %>
         <div class="contact__form-field">
-          <input
-            placeholder="Name"
-            type="text"
-            class="contact__form-input"
-            />
+          <%= f.text_field :name, placeholder: "Name", class: "contact__form-input", required: true %>
         </div>
         <div class="contact__form-field">
-          <input
-            placeholder="Email"
-            type="text"
-            class="contact__form-input"
-            />
+          <%= f.email_field :email, placeholder: "Email", class: "contact__form-input", required: true %>
         </div>
         <div class="contact__form-field">
-          <input
-            placeholder="Phone Number"
-            type="text"
-            class="contact__form-input"
-            />
+          <%= f.text_field :phone, placeholder: "Phone Number", class: "contact__form-input", required: true %>
         </div>
         <div class="contact__form-field">
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Message"
-              ></textarea>
+          <%= f.text_area :message, placeholder: "Message", class: "contact__form-input", required: true, rows: 10 %>
         </div>
-        <button class="btn btn--primary contact__btn">Submit</button>
-      </form>
+        <%= f.submit "Submit", class: "btn btn--primary contact__btn" %>
+      <% end %>
     </div>
   </div>
 </section>
+
+
+
 <footer class="main-footer">
   <div class="container">
     <div class="main-footer__upper">

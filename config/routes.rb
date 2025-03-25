@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   namespace :admin do
     get "dashboard", to: "dashboard#index"
   end
+  post "/send_email", to: "home#send_email"
+
 end
