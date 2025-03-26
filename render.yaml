@@ -1,0 +1,22 @@
+databases:
+  - name: portfolio
+    databaseName: portfolio-production
+    user: admin
+    plan: free
+
+services:
+  - type: web
+    name: portfolio
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: portfolio-production
+          property: connectionString
+      - key: RAILS_MASTER KEY
+        sync: false- key: WEB_CONCURRENCY
+        value: 2 # sensible default
